@@ -3,7 +3,7 @@ Usage Instructions
 
 #### Steps to Run the Project
 Download All Files Into Single Folder
-IMPORTANT - GENERATE THE CERTIFICATES USING generate_certs.py on the server and share it to the client systems and on client system it must be stored under the name certs folder.
+IMPORTANT - GENERATE THE CERTIFICATES USING generate_certs.py on the server and share it to the client systems and on client system it must be stored under the name certs folder.IT HAS NOT BEEN UPLOADED DUE TO SECURITY REASONS
 
 Step 1:
 Start the Server
