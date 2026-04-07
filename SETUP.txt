@@ -1,0 +1,17 @@
+#### Setup Steps
+
+1. Download Project
+Place all project files in one folder:
+- server.py  
+- agent.py  
+- generate_certs.py  
+- perf_test.py  
+- requirements.txt  
+
+---
+
+2. Install Requirements 
+psutil
+cryptography
+
+---
