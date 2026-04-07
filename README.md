@@ -43,4 +43,3 @@ project/
 ├── generate_certs.py
 ├── perf_test.py
 ├── certs/
-└── requirements.txt
