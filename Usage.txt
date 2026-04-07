@@ -1,0 +1,53 @@
+Usage Instructions
+------------------
+
+#### Steps to Run the Project
+Download All Files Into Single Folder
+IMPORTANT - GENERATE THE CERTIFICATES USING generate_certs.py on the server and share it to the client systems and on client system it must be stored under the name certs folder.
+
+Step 1:
+Start the Server
+Run the server on your system:
+python server.py
+
+Step 2: 
+Run Agent on Client System
+On another laptop/system, run:
+python agent.py --server <SERVER_IP>
+
+Example:
+python agent.py --server 192.168.1.11
+
+Step 3: Monitor Output
+Server will display incoming metrics from agents
+Agent will show metrics being sent
+
+Step 4: Check Alerts
+When system metrics exceed thresholds
+Server generates alerts
+Alerts are sent back to agent
+Agent displays alert messages in terminal
+
+Step 5: Run Multiple Clients (Optional)
+
+Run multiple agents on different systems using the same command:
+
+python agent.py --server <SERVER_IP>
+Step 6: Performance Testing (Optional)
+
+Run:
+
+python perf_test.py
+
+This tests:
+
+Throughput
+Concurrent clients
+Scalability
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Notes
+Ensure server runs before agent
+Both systems must be on same network
+Certificates must be properly generated and copied
+
