@@ -157,26 +157,24 @@ This simulates multiple monitoring agents and helps analyze the server's perform
 ## Communication Flow
 
 ```
-        +----------------------+
-        |      Agent 1         |
-        +----------+-----------+
-                   |
-                   | UDP Metrics
-                   |
-        +----------v-----------+
-        |                      |
-        |   Monitoring Server  |
-        |                      |
-        +----------+-----------+
-                   ^
-                   |
-          TLS Encrypted Alerts
-                   |
-        +----------+-----------+
-        |      Agent 1         |
-        +----------------------+
-
-        (Supports Multiple Agents)
+                       UDP Metrics
++-----------+      │
+| Agent 1   |──────┐
++-----------+      │
+                   │
++-----------+      │
+| Agent 2   |──────┼──────────────+
++-----------+      │              │
+                   │              │
++-----------+      │              ▼
+| Agent N   |──────┘      +----------------------+
+                           | Monitoring Server    |
+                           |                      |
+                           +----------------------+
+                                     │
+                                     │ TLS Alerts
+                                     ▼
+                    Alerts sent back to the respective agents
 ```
 
 ## Future Improvements
